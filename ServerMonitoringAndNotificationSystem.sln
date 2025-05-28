@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerMonitoringAndNotificationSystem", "ServerMonitoringAndNotificationSystem\ServerMonitoringAndNotificationSystem.csproj", "{26C0C65C-A53D-490D-9D57-3177D13C3C54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerMonitoringAndNotificationSystem", "ServerMonitoringAndNotificationSystem\ServerMonitoringAndNotificationSystem.csproj", "{680993D6-23D1-459F-AD41-292A6D63ACE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{26C0C65C-A53D-490D-9D57-3177D13C3C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26C0C65C-A53D-490D-9D57-3177D13C3C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26C0C65C-A53D-490D-9D57-3177D13C3C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26C0C65C-A53D-490D-9D57-3177D13C3C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680993D6-23D1-459F-AD41-292A6D63ACE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680993D6-23D1-459F-AD41-292A6D63ACE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680993D6-23D1-459F-AD41-292A6D63ACE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680993D6-23D1-459F-AD41-292A6D63ACE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
