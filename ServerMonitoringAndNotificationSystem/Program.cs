@@ -16,12 +16,15 @@ class Program
 
         var service = new StatCollectionService();
         var producer = new RabbitMqProducer();
+        var consumer = new RabbitMqConsumer();
 
-        while (true)
-        {
-            var stats = service.GetServerStatistics();
-            await producer.Publish(stats);
-            Thread.Sleep(interval*1000);
-        }
+        await consumer.Consume();
+
+        // while (true)
+        // {
+        //     var stats = service.GetServerStatistics();
+        //     await producer.Publish(stats);
+        //     Thread.Sleep(interval*1000);
+        // }
     }
 }
