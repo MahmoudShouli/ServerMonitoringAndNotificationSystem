@@ -31,7 +31,7 @@ public class RabbitMqProducer: IStatsProducer
             body: body
         );
 
-        Console.WriteLine($"Published: {stats}");
+        Console.WriteLine($"Producer published: {stats}");
     }
 
     private string GetServerIdentifier()
