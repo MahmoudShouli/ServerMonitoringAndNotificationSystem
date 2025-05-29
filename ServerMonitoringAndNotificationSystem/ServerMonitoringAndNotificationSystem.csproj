@@ -11,6 +11,8 @@
       <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.0-preview.4.25258.110" />
       <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.0-preview.4.25258.110" />
       <PackageReference Include="Microsoft.Windows.Compatibility" Version="10.0.0-preview.4.25258.110" />
+      <PackageReference Include="RabbitMQ.Client" Version="7.1.2" />
+      <PackageReference Include="System.Text.Json" Version="10.0.0-preview.4.25258.110" />
     </ItemGroup>
 
     <ItemGroup>
