@@ -1,5 +1,6 @@
 ﻿using ServerMonitoringAndNotificationSystem.Services;
 using Microsoft.Extensions.Configuration;
+using ServerMonitoringAndNotificationSystem.MessageQueue;
 
 namespace ServerMonitoringAndNotificationSystem;
 
@@ -14,7 +15,7 @@ class Program
         var interval = int.Parse(config["ServerStatisticsConfig:SamplingIntervalSeconds"]);
 
         var service = new StatCollectionService();
-        var producer = new ServerStatisticsProducer();
+        var producer = new RabbitMqProducer();
 
         while (true)
         {
