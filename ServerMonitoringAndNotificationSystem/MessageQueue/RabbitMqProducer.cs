@@ -1,6 +1,5 @@
 ﻿using System.Text;
 using System.Text.Json;
-using System.Text.Json.Nodes;
 using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;
 
@@ -32,7 +31,7 @@ public class RabbitMqProducer: IStatsProducer
             body: body
         );
 
-        Console.WriteLine($"Published: {stats}");
+        Console.WriteLine($"Producer published: {stats}");
     }
 
     private string GetServerIdentifier()
