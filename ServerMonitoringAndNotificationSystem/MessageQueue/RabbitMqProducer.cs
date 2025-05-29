@@ -4,9 +4,9 @@ using System.Text.Json.Nodes;
 using Microsoft.Extensions.Configuration;
 using RabbitMQ.Client;
 
-namespace ServerMonitoringAndNotificationSystem;
+namespace ServerMonitoringAndNotificationSystem.MessageQueue;
 
-public class ServerStatisticsProducer
+public class RabbitMqProducer: IStatsProducer
 {
     private const string QueueName = "server-stats";
     private const string ExchangeName = "server-stats-exchange";
