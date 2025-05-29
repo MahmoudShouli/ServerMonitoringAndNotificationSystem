@@ -5,7 +5,7 @@ namespace ServerMonitoringAndNotificationSystem;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         var config = new ConfigurationBuilder()
             .AddJsonFile("appsettings.json")
@@ -14,10 +14,12 @@ class Program
         var interval = int.Parse(config["ServerStatisticsConfig:SamplingIntervalSeconds"]);
 
         var service = new StatCollectionService();
+        var producer = new ServerStatisticsProducer();
 
         while (true)
         {
-            Console.WriteLine(service.GetServerStatistics().ToString());
+            var stats = service.GetServerStatistics();
+            await producer.Publish(stats);
             Thread.Sleep(interval*1000);
         }
     }
