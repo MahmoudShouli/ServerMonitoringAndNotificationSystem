@@ -1,9 +1,27 @@
-﻿namespace ServerMonitoringAndNotificationSystem;
+﻿using ServerMonitoringAndNotificationSystem.Services;
+using Microsoft.Extensions.Configuration;
+using ServerMonitoringAndNotificationSystem.MessageQueue;
+
+namespace ServerMonitoringAndNotificationSystem;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        var config = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json")
+            .Build();
+
+        var interval = int.Parse(config["ServerStatisticsConfig:SamplingIntervalSeconds"]);
+
+        var service = new StatCollectionService();
+        var producer = new RabbitMqProducer();
+
+        while (true)
+        {
+            var stats = service.GetServerStatistics();
+            await producer.Publish(stats);
+            Thread.Sleep(interval*1000);
+        }
     }
 }
